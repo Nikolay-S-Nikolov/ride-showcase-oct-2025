@@ -28,12 +28,12 @@
 
             <ul class="menu">
                 <li><a href="/">Home</a></li>
-                <li><a href="/posts">Browse Rides</a></li>
+                <li><a href="/posts/all">Browse Rides</a></li>
 
                 {{#if isAuthenticated}}
                 <!-- Logged users -->
                 <li><a href="/posts/create">Post a Car</a></li>
-                <li><a href="/posts/all">My Showcase</a></li>
+                <li><a href="/posts/my-posts">My Showcase</a></li>
                 <li><a href="/auth/logout">Logout</a></li>
                 
                 {{else}}

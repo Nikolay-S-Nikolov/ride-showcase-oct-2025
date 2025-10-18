@@ -19,7 +19,7 @@ const carSchema = new Schema({
     topSpeed: {
         type: Number,
         required: [true, 'Top speed field is required'],
-        minLength: [2, 'The top speed should be at least 2 digit number.'],
+        min: [10, 'The top speed should be at least 2 digit number.'],
     },
     image: {
         type: String,
