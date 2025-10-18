@@ -125,7 +125,8 @@
   - [x] Add all-posts
   - [x] Add all-posts rout, service and dynamic data
   - [x] add post details page, details rout and service
-
+  - [x] add post details page, details rout and service
+  - [x] add like post rout and service
 
 
 Bonuses

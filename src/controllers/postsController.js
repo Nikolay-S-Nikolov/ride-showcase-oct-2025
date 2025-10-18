@@ -2,6 +2,7 @@ import { Router } from "express";
 import { isAuth } from '../middlewares/authMiddleware.js';
 import { getErrorMessage } from '../utils/errorUtils.js'
 import postsService from "../services/postsService.js";
+import { isCreator } from '../middlewares/postMiddleware.js'
 
 const postsController = Router();
 
@@ -42,5 +43,19 @@ postsController.get('/:postId/details', async (req, res) => {
         res.status(400).render('404', { error: errorMessage });
     }
 })
+
+postsController.get('/:postId/like', isAuth, async (req, res) => {
+    const userId = req.user.id;
+    const postId = req.params.postId;
+    try {
+        await postsService.like(userId, postId);
+        res.redirect(`/posts/${postId}/details`);
+    } catch (err) {
+        const errorMessage = getErrorMessage(err);
+        res.status(400).render('404', { error: errorMessage });
+    }
+
+})
+
 
 export default postsController;

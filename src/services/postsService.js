@@ -10,8 +10,27 @@ export default {
         return Car.find();
     },
 
-    getOne(postId){
+    getOne(postId) {
         return Car.findById(postId).populate('owner').populate('likes');
+    },
+
+    async like(userId, postId) {
+        const post = await Car.findById(postId);
+        if (!post) {
+            throw new Error('No such post');
+        }
+
+        if (post.owner.equals(userId)) {
+            throw new Error('Creators can not like their posts');
+        }
+
+        if (post.likes.some(id => id.equals(userId))) {
+            throw new Error('You have already liked this post');
+        }
+
+        post.likes.push(userId);
+        await post.save();
+        return post;
     },
 
 }

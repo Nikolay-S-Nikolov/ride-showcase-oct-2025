@@ -21,15 +21,15 @@
                 <div class="social-btn">
                     <!-- Only for registered user and author of the post -->
                     {{#if isCreator}}
-                    <a href="#" class="edit-btn">Edit</a>
-                    <a href="#" class="del-btn">Delete</a>
+                    <a href="/posts/{{post.id}}/edit" class="edit-btn">Edit</a>
+                    <a href="/posts/{{post.id}}/delete" class="del-btn">Delete</a>
                     {{else}}
                         {{#if isLiked}}
                         <!-- logged in user who has already liked-->
                         <p class="you-liked">Thanks For The Like</p>
                         {{else}}
                         <!-- logged in users, who have not yet liked-->
-                        <a href="#" class="like-btn">Like</a>
+                        <a href="/posts/{{post.id}}/like" class="like-btn">Like</a>
                         {{/if}}
                     {{/if}}
                 </div>
