@@ -111,7 +111,7 @@
  - [x] modify navigation links
  - [x] replace login page
  - [x] replace register page
- - [ ] modify user model
+ - [x] modify user model
  - [ ] modify login and register actions (change username to email)
  - [ ] modify user service (if needed)
  - [ ] modify token generation
