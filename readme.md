@@ -128,6 +128,7 @@
   - [x] add post details page, details rout and service
   - [x] add like post rout and service
   - [x] add is owner middleware
+  - [x] add post edit logic
 
 
 Bonuses

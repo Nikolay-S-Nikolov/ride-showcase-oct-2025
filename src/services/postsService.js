@@ -33,4 +33,10 @@ export default {
         return post;
     },
 
+    edit(postId, postData) {
+        const opt = { runValidators: true }
+        const updatedPost = Car.findByIdAndUpdate(postId, postData, opt);
+        return updatedPost;
+    },
+
 }

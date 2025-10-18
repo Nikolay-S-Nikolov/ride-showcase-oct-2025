@@ -57,5 +57,29 @@ postsController.get('/:postId/like', isAuth, async (req, res) => {
 
 })
 
+postsController.get('/:postId/edit', isAuth, isCreator, async (req, res) => {
+    const postId = req.params.postId;
+    try {
+        const post = await postsService.getOne(postId);
+        res.render('posts/edit', { post });
+    } catch (err) {
+        const errorMessage = getErrorMessage(err);
+        res.status(400).render('404', { error: errorMessage });
+    }
+
+})
+
+postsController.post('/:postId/edit', isAuth, isCreator, async (req, res) => {
+    const postId = req.params.postId;
+    const postData = req.body;
+    try {
+        await postsService.edit(postId, postData);
+        res.redirect(`/posts/${postId}/details`);
+    } catch (err) {
+        const errorMessage = getErrorMessage(err);
+        res.status(400).render('posts/edit', { post: postData, error: errorMessage });
+    }
+
+})
 
 export default postsController;
