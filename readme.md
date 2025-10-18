@@ -109,8 +109,8 @@
    - [x] error notification
  - [x] replace home page
  - [x] modify navigation links
- - [ ] replace login page
- - [ ] replace register page
+ - [x] replace login page
+ - [x] replace register page
  - [ ] modify user model
  - [ ] modify login and register actions (change username to email)
  - [ ] modify user service (if needed)
