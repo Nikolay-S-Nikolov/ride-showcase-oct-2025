@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Catalog Page</title>
+
+    <!-- Do not forget to change the path to the css file -->
+    <link href="./static/css/style.css" type="text/css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div id="box">
+
+        <!-- In case of error, you should display div with class "error-container" -->
+        <!-- You can choose to display the first error or all of them (error message/s in your opinion) -->
+        <!--
+        <div class="error-container">
+            <p>Error</p>
+        </div>-->
+
+        <nav>
+            <!-- Do not forget to change the path to the image -->
+            <img src="./static/img/logo.png" alt="logo">
+              <ul class="menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Browse Rides</a></li>
+
+                <!-- Logged users -->
+                <li><a href="#">Post a Car</a></li>
+                <li><a href="#">My Showcase</a></li>
+                <li><a href="#">Logout</a></li>
+
+                <!-- Guest users -->
+                <li><a href="#">Register</a></li>
+                <li><a href="#">Login</a></li>
+            </ul>
+
+
+        </nav>
+
+
+        <main>
+
+            <section id="catalog">
+                <h1>All posts</h1>
+                <div class="wrap">
+                    <!-- If there are posts for car in the database display each of them -->
+                    <div class="car-card car-card-info">
+                        <div class="front">
+                            <img src="./static/img/Bugatti Chiron Super Sport.webp"
+                                alt="Bugatti Chiron Super Sport 300+">
+                        </div>
+                        <div class="back">
+                            <h1>Bugatti Chiron Super Sport 300+</h1>
+                            <h2>Top Speed: 490 kmph</h2>
+                            <p>Description: The Bugatti Chiron Super Sport 300+ is a limited-edition hypercar that
+                                became the first production car to break the 300 mph barrier. Powered by a 1,578 hp
+                                quad-turbocharged W16 engine, it features enhanced aerodynamics and a lightweight carbon
+                                fiber body. Only 30 units were produced, each priced at $3.9 million.</p>
+                            <a href="#" class="details">Details</a>
+                        </div>
+                    </div>
+
+                    <div class="car-card car-card-info">
+                        <div class="front">
+                            <img src="./static/img/Citroen DS.webp" alt="Citroën DS">
+                        </div>
+                        <div class="back">
+                            <h1>Citroën DS</h1>
+                            <h2>Top Speed: 144 kmph</h2>
+                            <p>Description: The Citroën DS was a revolutionary executive car known for its futuristic
+                                design and advanced technology. It introduced hydropneumatic suspension, power steering,
+                                and disc brakes, setting new standards in automotive engineering. Over 1.4 million units
+                                were produced during its 20-year run.</p>
+                            <a href="#" class="details">Details</a>
+                        </div>
+                    </div>
+
+                    <div class="car-card car-card-info">
+                        <div class="front">
+                            <img src="./static/img/Glickenhaus 004CS.webp" alt="Glickenhaus 004CS">
+                        </div>
+                        <div class="back">
+                            <h1>Glickenhaus 004CS</h1>
+                            <h2>Top Speed: 324 kmph</h2>
+                            <p>Description: The Glickenhaus 004CS is a street-legal supercar featuring a central driving
+                                position and a supercharged 6.2-liter V8 engine producing 650 hp. Its carbon-fiber body
+                                and unique bubble roof design offer both performance and distinctive aesthetics.
+                            </p>
+                            <a href="#" class="details">Details</a>
+                        </div>
+                    </div>
+
+                    <div class="car-card car-card-info">
+                        <div class="front">
+                            <img src="./static/img/Porsche 959 .webp" alt="Porsche 959">
+                        </div>
+                        <div class="back">
+                            <h1>Porsche 959</h1>
+                            <h2>Top Speed: 317 kmph</h2>
+                            <p>Description: The Porsche 959 was a technological marvel of the 1980s, featuring a
+                                twin-turbocharged flat-six engine, all-wheel drive, and advanced aerodynamics.
+                                Originally developed for Group B rallying, it became one of the fastest and most
+                                advanced cars of its time.</p>
+                            <a href="#" class="details">Details</a>
+                        </div>
+                    </div>
+
+
+
+
+                    <!-- If there are still no posts in the database display: -->
+                    <!-- <div class="no-posts">
+                        <p class="no-cars">There are no car posts yet...</p>
+                    </div> -->
+                </div>
+            </section>
+        </main>
+
+
+        <footer>
+            © JS Back-End Exam 2025
+        </footer>
+    </div>
+
+</body>
+
+</html>
