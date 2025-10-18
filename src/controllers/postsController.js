@@ -15,11 +15,16 @@ postsController.post('/create', isAuth, async (req, res) => {
 
     try {
         await postsService.create(postData, userId);
-        res.render('posts/all');
+        res.redirect('/posts/all');
     } catch (err) {
         const errorMessage = getErrorMessage(err);
         res.status(400).render('posts/create', { error: errorMessage, post: postData });
     }
+})
+
+postsController.get('/all', async (req, res) => {
+    const posts = await postsService.getAll();
+    res.render('posts/all-posts', { posts });
 })
 
 export default postsController;

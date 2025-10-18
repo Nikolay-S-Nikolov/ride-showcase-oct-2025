@@ -5,4 +5,8 @@ export default {
         postData.owner = userId;
         return Car.create(postData);
     },
+
+    getAll() {
+        return Car.find();
+    }
 }

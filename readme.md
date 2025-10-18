@@ -123,6 +123,7 @@
   - [x] Add postsController rout
   - [x] Add postsController post rout,refactor post form, add postsService
   - [x] Add all-posts page
+  - [x] Add all-posts rout and service
 
 
 
