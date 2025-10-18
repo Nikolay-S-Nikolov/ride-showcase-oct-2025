@@ -8,5 +8,10 @@ export default {
 
     getAll() {
         return Car.find();
-    }
+    },
+
+    getOne(postId){
+        return Car.findById(postId).populate('owner').populate('likes');
+    },
+
 }

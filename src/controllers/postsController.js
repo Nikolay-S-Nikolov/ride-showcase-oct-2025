@@ -27,4 +27,20 @@ postsController.get('/all', async (req, res) => {
     res.render('posts/all-posts', { posts });
 })
 
+postsController.get('/:postId/details', async (req, res) => {
+    const postId = req.params.postId;
+
+    try {
+        const post = await postsService.getOne(postId);
+        const isCreator = post.owner.id == req.user?.id;
+        const isLiked = post.likes.some(u => u.equals(req.user?.id));
+        const totalLikes = post.likes.length;
+        const likesList = post.likes.map(u => u.email).join(', ');
+        res.render('posts/details', { post, isCreator, isLiked, totalLikes, likesList });
+    } catch (err) {
+        const errorMessage = getErrorMessage(err);
+        res.status(400).render('404', { error: errorMessage });
+    }
+})
+
 export default postsController;

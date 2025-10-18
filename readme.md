@@ -122,8 +122,9 @@
   - [x] Add create Car post page
   - [x] Add postsController rout
   - [x] Add postsController post rout,refactor post form, add postsService
-  - [x] Add all-posts page
-  - [x] Add all-posts rout and service
+  - [x] Add all-posts
+  - [x] Add all-posts rout, service and dynamic data
+  - [x] add post details page, details rout and service
 
 
 
