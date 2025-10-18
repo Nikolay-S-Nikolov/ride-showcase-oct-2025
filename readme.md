@@ -121,6 +121,8 @@
   - [x] create Car model
   - [x] Add create Car post page
   - [x] Add postsController rout
+  - [x] Add postsController post rout,refactor post form, add postsService
+
 
 
 Bonuses

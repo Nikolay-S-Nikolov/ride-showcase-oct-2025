@@ -10,32 +10,33 @@
             <ul class="ul-wrap">
                 <li>
                     <label for="car-model">Car Model Name:</label>
-                    <input type="text" class="inputFields" id="car-model" name="car-model"
+                    <input type="text" class="inputFields" id="car-model" name="model" value="{{post.model}}"
                         placeholder="Bugatti Chiron" />
                 </li>
                 <li>
                     <label for="manufacturer">Manufacturer:</label>
                     <input type="text" class="inputFields" id="manufacturer" name="manufacturer"
-                        placeholder="Bugatti" />
+                        value="{{post.manufacturer}}" placeholder="Bugatti" />
                 </li>
                 <li>
                     <label for="engine-type">Engine Type:</label>
-                    <input type="text" class="inputFields" id="engine-type" name="engine"
+                    <input type="text" class="inputFields" id="engine-type" name="engine" value="{{post.engine}}"
                         placeholder="8.0L Quad-Turbo W16" />
                 </li>
                 <li>
                     <label for="top-speed">Top Speed:</label>
-                    <input type="text" class="inputFields" id="top-speed" name="top-speed"
+                    <input type="text" class="inputFields" id="top-speed" name="topSpeed" value="{{post.topSpeed}}"
                         placeholder="Top Speed: 304 mph" />
                 </li>
                 <li>
                     <label for="car-image">Image URL:</label>
-                    <input type="text" class="inputFields" id="car-image" name="image" placeholder="https://..." />
+                    <input type="text" class="inputFields" id="car-image" name="image" value="{{post.image}}"
+                        placeholder="https://..." />
                 </li>
                 <li>
                     <label for="description">Car Description:</label>
                     <textarea id="description" class="inputFields" name="description"
-                        placeholder="A brief summary of this exotic vehicle..."></textarea>
+                        placeholder="A brief summary of this exotic vehicle...">{{post.description}}</textarea>
                 </li>
                 <li id="center-btn">
                     <button id="create-btn">Create</button>
