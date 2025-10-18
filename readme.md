@@ -130,6 +130,7 @@
   - [x] add is owner middleware
   - [x] add post edit logic
   - [x] add post delete logic
+  - [x] add my posts logic
 
 
 Bonuses

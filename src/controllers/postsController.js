@@ -93,4 +93,16 @@ postsController.get('/:postId/delete', isAuth, isCreator, async (req, res) => {
     }
 })
 
+postsController.get('/my-posts', isAuth, async (req, res) => {
+    const userId = req.user.id;
+    try {
+        const myPosts = await postsService.getMyPosts(userId);
+        res.render('posts/my-posts', { posts: myPosts })
+    } catch (err) {
+        const errorMessage = getErrorMessage(err);
+        res.status(400).render('404', { error: errorMessage });
+    }
+})
+
+
 export default postsController;

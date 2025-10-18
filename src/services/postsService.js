@@ -39,8 +39,13 @@ export default {
         return updatedPost;
     },
 
-    delete(postId){
+    delete(postId) {
         return Car.findByIdAndDelete(postId);
+    },
+
+    getMyPosts(userId) {
+        const myPosts = Car.find({ owner: userId });
+        return myPosts;
     },
 
 }
