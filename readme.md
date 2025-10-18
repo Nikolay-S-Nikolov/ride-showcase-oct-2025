@@ -119,6 +119,8 @@
 
  ## Exam steps
   - [x] create Car model
+  - [x] Add create Car post page
+  - [x] Add postsController rout
 
 
 Bonuses
