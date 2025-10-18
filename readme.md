@@ -129,6 +129,7 @@
   - [x] add like post rout and service
   - [x] add is owner middleware
   - [x] add post edit logic
+  - [x] add post delete logic
 
 
 Bonuses

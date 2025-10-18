@@ -82,4 +82,15 @@ postsController.post('/:postId/edit', isAuth, isCreator, async (req, res) => {
 
 })
 
+postsController.get('/:postId/delete', isAuth, isCreator, async (req, res) => {
+    const postId = req.params.postId;
+    try {
+        await postsService.delete(postId);
+        res.redirect('/posts/all');
+    } catch (err) {
+        const errorMessage = getErrorMessage(err);
+        res.status(400).render('404', { error: errorMessage });
+    }
+})
+
 export default postsController;

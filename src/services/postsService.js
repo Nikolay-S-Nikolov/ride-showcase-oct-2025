@@ -39,4 +39,8 @@ export default {
         return updatedPost;
     },
 
+    delete(postId){
+        return Car.findByIdAndDelete(postId);
+    },
+
 }
